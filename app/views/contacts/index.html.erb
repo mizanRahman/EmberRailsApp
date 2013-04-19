@@ -1,0 +1,13 @@
+<h1>Contacts</h1>
+
+<script type="text/x-handlebars">
+  {{ view App.ListContactsView }}
+</script>
+<%= javascript_include_tag "jquery" %>
+<script type="text/javascript" src=""></script>
+<script type="text/javascript">
+  $(function() {
+    // App.contactsController.loadAll(<%= @contacts.to_json.html_safe %>);
+    App.contactsController.findAll();
+  });
+</script>
